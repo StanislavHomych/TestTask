@@ -1,0 +1,153 @@
+@font-face {
+    font-family: "Avenir-Next-Regular";
+    src: url(./Fonts/AvenirNextLTPro-Regular.otf);
+}
+
+@font-face {
+    font-family: "Avenir-Next-Bold";
+    src: url(./Fonts/AvenirNextLTPro-Bold.otf);
+}
+
+
+body {
+    background-color: #f1f1ee;
+}
+
+/* Main wrapper styles */
+
+.mainblock {
+    display: grid;
+    max-width: 1000px;
+    margin: 0 auto;
+    grid-template-columns: 7fr 5fr;
+    grid-column-gap: 20px;
+
+}
+
+
+
+/* Forms block */
+.formwrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 50px;
+    grid-gap: 20px;
+
+}
+
+/* Form header */
+
+.form__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.form__title {
+    font-family: "Avenir-Next-Bold";
+    font-size: 1.5rem;
+}
+
+.form__description {
+    font-family: "Avenir-Next-Regular";
+    font-size: 1rem;
+
+}
+
+
+
+/* Forms items */
+
+.forms__input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0 0 0 15px;
+    box-shadow: 0px 16px 16px 0px #CACBD240;
+
+}
+
+.forms__textarea-message{
+    padding-top: 15px;
+}
+
+.forms__item--name {
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+}
+
+
+
+.forms__item--position {
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+}
+
+.forms__item--institution {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.forms__item--email {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.forms__item--phone {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.forms__item--medical {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.forms__item-inquiry {
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+
+}
+
+.forms__item-message {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 9;
+}
+
+
+/* Button */
+
+
+/* Button element */
+.forms__button{
+    font-family:"Avenir-Next-Bold";
+    color: #fff;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+/* modifier for primary button */
+.forms__button-primary{
+    background-color: #000;
+    width: 70%;
+}
+
+
+
+
+
+
+
+/* Map styles */
+.map {
+    margin: 40px 0;
+}
