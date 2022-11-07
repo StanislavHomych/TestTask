@@ -62,6 +62,7 @@ body {
 
 .forms__input {
     box-sizing: border-box;
+    position: relative;
     width: 100%;
     height: 100%;
     border: none;
@@ -71,7 +72,7 @@ body {
 
 }
 
-.forms__textarea-message{
+.forms__textarea-message {
     padding-top: 15px;
 }
 
@@ -128,19 +129,21 @@ body {
 
 
 /* Button element */
-.forms__button{
-    font-family:"Avenir-Next-Bold";
+.forms__button {
+    font-family: "Avenir-Next-Bold";
     color: #fff;
     border-radius: 0.5rem;
     cursor: pointer;
 }
 
 /* modifier for primary button */
-.forms__button-primary{
+.forms__button-primary {
     background-color: #000;
     width: 70%;
 }
 
+
+/* custom select */
 
 
 
@@ -155,29 +158,27 @@ body {
 /* Map informational window */
 
 .gm-style-iw {
-    width: 200px !important; 
+    width: 200px !important;
 }
 
 .gm-ui-hover-effect {
     display: none !important;
 }
 
-.content{
-   
-}
+.content {}
 
-.info_heading{
+.info_heading {
     font-weight: 600;
     margin: 0 0 5px 0;
 }
 
-.info_content{
+.info_content {
     font-weight: 400;
     margin: 0 0 5px 0;
 
 }
 
-.info_contact{
+.info_contact {
     font-size: 0.7rem;
     color: #858585;
     font-weight: 400;
@@ -185,8 +186,31 @@ body {
 
 }
 
-.contactwrapper{
+.contactwrapper {
     display: flex;
     align-items: center;
     margin: 0 0 0 5px;
+}
+
+
+/* custom select */
+
+.selectwrapper{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding: 10px 10px 10px 15px;
+    z-index: 10;
+    height: auto;
+    width: auto;
+    background-color: #fff;
+
+    
+}
+
+.selectitem{
+    margin: 3px 0;
+    padding: 2px;
+    cursor: pointer;
+    font-family: "Avenir-Next-Regular";
 }
