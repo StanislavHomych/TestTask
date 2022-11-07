@@ -10,7 +10,7 @@
 
 
 body {
-    background-color: #f1f1ee;
+    background-color: #f6f6f6;
 }
 
 /* Main wrapper styles */
@@ -149,5 +149,44 @@ body {
 
 /* Map styles */
 .map {
-    margin: 40px 0;
+    margin: 30px 0 0 20px;
+}
+
+/* Map informational window */
+
+.gm-style-iw {
+    width: 200px !important; 
+}
+
+.gm-ui-hover-effect {
+    display: none !important;
+}
+
+.content{
+   
+}
+
+.info_heading{
+    font-weight: 600;
+    margin: 0 0 5px 0;
+}
+
+.info_content{
+    font-weight: 400;
+    margin: 0 0 5px 0;
+
+}
+
+.info_contact{
+    font-size: 0.7rem;
+    color: #858585;
+    font-weight: 400;
+    margin: 0 0 5px 10px;
+
+}
+
+.contactwrapper{
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 5px;
 }
