@@ -12,8 +12,6 @@ function initMap() {
               ]
             }
           ]
-      
-
     });
 
 
@@ -29,7 +27,6 @@ function initMap() {
         '<img src="https://img.icons8.com/ios/12/null/secured-letter--v1.png" />' +
         '<span class="info_contact">info@voodoo.com</span>' +
         '</div>' +
-
         '</div>';
 
     const infoWindow = new google.maps.InfoWindow({
@@ -58,9 +55,6 @@ function initMap() {
             anchor: marker, map: map
         })
     })
-
-
-
 }
 
 window.initMap = initMap;

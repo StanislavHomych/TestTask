@@ -82,7 +82,6 @@ let createCustomSelect = (options, placeholder) => {
 
         })
 
-
         //add chosen option value to selectMain 
         optionElement.addEventListener('click', (e) => {
             if (selectMain.firstChild.classList.value === 'innerValue') {
