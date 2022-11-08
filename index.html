@@ -16,16 +16,16 @@
 
             <div class="formwrapper">
                 <div class="form__header">
-                    <h3 class="form__title">Contact Us</h3>
-                    <h6 class="form__description">The Voodoo team is looking forward to hearing from tou!</h6>
+                    <h3 class="form__header-title">Contact Us</h3>
+                    <h6 class="form__header-description">The Voodoo team is looking forward to hearing from tou!</h6>
                 </div>
-                <div class="forms__item forms__item--fullname">
+                <div class="forms__item forms__item-name">
                     <input class="forms__input forms__input-name" type="text" placeholder="Full Name*">
                 </div>
-                <div class="forms__item forms__item--title">
+                <div class="forms__item forms__item-title">
                     <input class="forms__input forms__input-position" type="text" placeholder="Title/Position*">
                 </div>
-                <div class="forms__item forms__item_select forms__item-practice" id="institution">
+                <div class="forms__item forms__item_select forms__item-institution" id="institution">
                     <select class="forms__input forms__input-institution" type="select">
                     </select>
                 </div>
@@ -39,11 +39,12 @@
                     <select class="forms__input forms__input-medical" type="text" placeholder="Medical Profession*">
                     </select>
                 </div>
-                <div class="forms__item forms__item-inquiry">
-                    <input class="forms__input forms__input-inquiry" type="text" placeholder="Type of Inquiry">
+                <div class="forms__item forms__item_select forms__item-inquiry" id="inquiry">
+                    <select class="forms__input forms__input-inquiry" type="text" placeholder="Type of Inquiry">
+                    </select>
                 </div>
-                <div class="forms__item forms__item-message">
-                    <textarea class="forms__input forms__textarea-message" name="" id=""
+                <div class="forms__item forms__item--message">
+                    <textarea class="forms__input forms__textarea-message" 
                         placeholder="Enter Message"></textarea>
                 </div>
                 <button class="forms__button forms__button-primary">Send Message</button>

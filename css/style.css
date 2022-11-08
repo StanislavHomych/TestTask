@@ -9,6 +9,22 @@
 }
 
 
+
+/* variables */
+:root{
+    /* typography */
+    --font-regular: "Avenir-Next-Regular";
+    --font-bold: "Avenir-Next-Bold";
+
+    /* shadows */
+    --main-shadow: 0px 16px 16px 0px #CACBD240;
+
+    
+    /* radiuses */
+    --radius: 0.5rem;
+}
+
+
 body {
     background-color: #f6f6f6;
 }
@@ -21,6 +37,8 @@ body {
     margin: 0 auto;
     grid-template-columns: 7fr 5fr;
     grid-column-gap: 20px;
+    padding: 100px 0;
+
 
 }
 
@@ -43,16 +61,20 @@ body {
     justify-content: space-between;
     grid-column-start: 1;
     grid-column-end: 3;
+    
 }
 
-.form__title {
-    font-family: "Avenir-Next-Bold";
+.form__header-title {
+    font-family: var(--font-bold);
     font-size: 1.5rem;
+
 }
 
-.form__description {
+.form__header-description {
     font-family: "Avenir-Next-Regular";
     font-size: 1rem;
+    line-height: 20px;
+
 
 }
 
@@ -66,46 +88,59 @@ body {
     width: 100%;
     height: 100%;
     border: none;
-    border-radius: 0.5rem;
+    border-radius: var(--radius);
     padding: 0 0 0 15px;
-    box-shadow: 0px 16px 16px 0px #CACBD240;
+    box-shadow: var(--main-shadow);
 
 }
+
+/* forms items common styles */
 
 .forms__textarea-message {
     padding-top: 15px;
 }
 
-.forms__item--name {
+textarea{
+    resize: none;
+}
+
+.forms__item-name {
     grid-column-start: 1;
     grid-column-end: 2;
 
 }
 
+.forms__input::placeholder, .placeholderSelect {
+    font-family: var(--font-regular);
+    font-size: 0.9rem;
+    color: #858585;
+}
 
 
-.forms__item--position {
+/* forms items grid  */
+
+.forms__item-title {
     grid-column-start: 2;
     grid-column-end: 3;
 
 }
 
-.forms__item--institution {
+.forms__item-institution {
     grid-column-start: 1;
     grid-column-end: 2;
 }
 
-.forms__item--email {
+.forms__item-email {
     grid-column-start: 2;
     grid-column-end: 3;
 }
 
-.forms__item--phone {
+.forms__item-phone {
     grid-column-start: 1;
     grid-column-end: 2;
 }
 
-.forms__item--medical {
+.forms__item-medical {
     grid-column-start: 2;
     grid-column-end: 3;
 }
@@ -117,7 +152,7 @@ body {
 
 }
 
-.forms__item-message {
+.forms__item--message {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 6;
@@ -125,14 +160,13 @@ body {
 }
 
 
-/* Button */
 
 
 /* Button element */
 .forms__button {
-    font-family: "Avenir-Next-Bold";
+    font-family: var(--font-bold);
     color: #fff;
-    border-radius: 0.5rem;
+    border-radius: var(--radius);
     cursor: pointer;
 }
 
@@ -141,12 +175,6 @@ body {
     background-color: #000;
     width: 70%;
 }
-
-
-/* custom select */
-
-
-
 
 
 
@@ -164,8 +192,6 @@ body {
 .gm-ui-hover-effect {
     display: none !important;
 }
-
-.content {}
 
 .info_heading {
     font-weight: 600;
@@ -197,20 +223,156 @@ body {
 
 .selectwrapper{
     display: flex;
-    position: relative;
+    position: absolute;
     flex-direction: column;
-    padding: 10px 10px 10px 15px;
+    padding: 10px 15px;
     z-index: 10;
+    box-sizing: border-box;
     height: auto;
-    width: auto;
+    width: inherit;
     background-color: #fff;
-
+    left: 0;
+    top: 35px;
+    box-shadow: var(--main-shadow);
+    border-radius: var(--radius);
     
+
+}
+
+.forms__item_select{
+    cursor: pointer;
 }
 
 .selectitem{
-    margin: 3px 0;
-    padding: 2px;
     cursor: pointer;
-    font-family: "Avenir-Next-Regular";
+    font-family: var(--font-regular);
+    padding: 5px 0;
+
+}
+
+.select__main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+
+}
+
+/* select arrow */
+
+
+.selectArrow{
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+
+}
+
+.selectArrowOpen{
+    background: url("./../assets/icons/SelectArrowOpen.png") no-repeat;
+    background-position: center;
+
+}
+
+.selectArrowClosed{
+    background: url("./../assets/icons/SelectArrowClosed.png") no-repeat;
+    background-position: center;
+
+}
+
+
+
+/* responsive */
+
+@media screen and (max-width: 1024px) {
+    .mainblock{
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .mainblock{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .map{
+        margin: 20px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 560px) {
+
+    .map{
+        height: 450px;
+    }
+
+    .form__header-title{
+        padding-bottom: 10px;
+
+    }
+
+
+    .formwrapper{
+        grid-template-rows: repeat(8, 60px);
+        grid-gap: 30px;
+    }
+    
+    .forms__item-name {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    
+    }
+    
+    .forms__item-title {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    
+    }
+    
+    .forms__item-institution {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    
+    .forms__item-email {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    
+    .forms__item-phone {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    
+    .forms__item-medical {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    
+    .forms__item-inquiry {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    
+    
+    }
+    
+    .forms__item--message {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 9;
+        grid-row-end: 12;
+    }
+
+    .forms__button-primary{
+        width: 100%;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+@media screen and (max-width: 350px) {
+    .mainblock{
+        padding: 20px;
+    }
 }
