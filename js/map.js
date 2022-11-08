@@ -17,8 +17,6 @@ function initMap() {
     });
 
 
-
-
     const contentstring =
         '<div id="content">' +
         '<h1 class="info_heading">Voodo</h1>' +
