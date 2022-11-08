@@ -18,7 +18,7 @@ let createCustomSelect = (options, placeholder) => {
 
     let innerValueOfSelect = document.createElement('span');
     innerValueOfSelect.classList.add('innerValue');
-    
+
     selectMain.appendChild(innerValueOfSelect);
     innerValueOfSelect.innerHTML = placeholder;
 
@@ -105,9 +105,6 @@ let createCustomSelect = (options, placeholder) => {
 
 }
 
-
-
-createCustomSelect(optionsInstitution, "Practice / Institution*")
 
 let institutionElement = document.getElementById('institution');
 let medicalElement = document.getElementById('medical');
